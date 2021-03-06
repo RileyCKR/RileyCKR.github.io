@@ -3,41 +3,21 @@
 	<head>
 		<title>Chris Riley | Adventures of a Programmer</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <style>
-      .bodyClass {
-        background: url('bg.png')
-      }
-
-      .main {
-        background: url('border.png') #ccc;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        padding: 8px;
-        width: 768px;
-        margin: auto;
-      }
-
-      .mainInner {
-        background: #fff;
-        border: 1px solid #CCCCCC;
-      }
-
-      .logoFlex {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-
-      .logoContainer {
-        width: 200px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 	</head>
 	<body class="bodyClass">
     <!-- https://www.justinmind.com/blog/neumorphism-ui/ -->
+    <!-- https://neumorphism.io/#e0e0e0 -->
     <div class="main">
       <div class="mainInner">
-        <h1>Chris Riley</h1>
+        <div class="flexCenter">
+          <h1 class="header">Chris Riley</h1>
+        </div>
+        <div class="flexCenter">
+          <div class="portrait">
+            <img src="img/me.jpg" />
+          </div>
+        </div>
         <div class="logoFlex">
           <div>
             <a href="#">
