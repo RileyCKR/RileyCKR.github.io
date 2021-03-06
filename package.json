@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "light-server -s . -p 4000 -w \"*.js, *.html",
+    "start": "light-server -s ./docs -p 4000 -w \"*.js, *.html",
     "dependencyGraph": "env NODE_ENV=production ANALYZER=true yarn build",
     "build": "craco build",
     "test": "craco test --watchAll",
