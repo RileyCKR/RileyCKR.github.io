@@ -1,62 +1,89 @@
 @bgColor: #e0e0e0;
+@borderColor: #ccc;
+@lightShadow: -14px -14px 28px #ffffff;
+@darkShadow: 14px 14px 28px #c3c3c3;
+@bgGradient: linear-gradient(145deg, #f0f0f0, #cacaca);
+@shadow: @darkShadow, @lightShadow;
 
 .bodyClass {
-background: url('img/bg.png')
+  background: url('img/bg.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  height: 100%;
 }
 
 .main {
-background: url('img/border.png') #ccc;
-border-left: 1px solid #ccc;
-border-right: 1px solid #ccc;
-padding: 8px;
-width: 768px;
-margin: auto;
-}
+  background: url('img/border.png') @borderColor;
+  padding: 8px;
+  width: 768px;
+  margin: auto;
 
-.mainInner {
-background: @bgColor;
-border: 1px solid #CCCCCC;
+  box-shadow: 20px 20px 40px #000,
+    -20px -20px 40px #000;
+
+  border-radius: 16px;
+
+  .inner {
+    background: @bgColor;
+    border: 1px solid @borderColor;
+    border-radius: 10px;
+
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .header {
-font-size: 72px;
-line-height: 1em;
-letter-spacing: 0;
-font-weight: normal;
-font-family: palatino,platino linotype,georgia,times,times new roman,serif;
-margin: 0;
+  font-size: 72px;
+  line-height: 1em;
+  letter-spacing: 0;
+  font-weight: normal;
+  font-family: palatino,platino linotype,georgia,times,times new roman,serif;
+  margin: 0;
 }
 
 .logoFlex {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.logoContainer {
-width: 200px;
+  .logoContainer {
+    width: 75px;
+    margin: 0 10px;
+    background: transparent;
+    
+    :hover {
+      fill: #000;
+    }
+    
+    svg {
+      fill: #222;
+      
+    }
+  }
 }
 
 .flexCenter {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .portrait {
-width: 400px;
-height: 400px;
-border: 10px solid @bgColor;;
-border-radius: 400px;
-overflow: hidden;
-box-shadow:  20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
-}
+  width: 400px;
+  height: 400px;
+  border: 10px solid @bgColor;
+  border-radius: 400px;
+  overflow: hidden;
+  box-shadow:  @shadow;
+  background: @bgGradient;
+  //margin: 60px 0;
 
-.portraitInner {
-
-}
-
-.portrait img {
-max-width: 100%;
-max-height: 100%;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }

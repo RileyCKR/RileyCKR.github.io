@@ -1,17 +1,27 @@
 .bodyClass {
   background: url('img/bg.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  height: 100%;
 }
 .main {
   background: url('img/border.png') #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
   padding: 8px;
   width: 768px;
   margin: auto;
+  box-shadow: 20px 20px 40px #000, -20px -20px 40px #000;
+  border-radius: 16px;
 }
-.mainInner {
+.main .inner {
   background: #e0e0e0;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .header {
   font-size: 72px;
@@ -23,11 +33,19 @@
 }
 .logoFlex {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
-.logoContainer {
-  width: 200px;
+.logoFlex .logoContainer {
+  width: 75px;
+  margin: 0 10px;
+  background: transparent;
+}
+.logoFlex .logoContainer :hover {
+  fill: #000;
+}
+.logoFlex .logoContainer svg {
+  fill: #222;
 }
 .flexCenter {
   display: flex;
@@ -39,7 +57,8 @@
   border: 10px solid #e0e0e0;
   border-radius: 400px;
   overflow: hidden;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  box-shadow: 14px 14px 28px #c3c3c3, -14px -14px 28px #ffffff;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
 }
 .portrait img {
   max-width: 100%;
