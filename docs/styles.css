@@ -3,19 +3,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 0;
-  height: 100%;
+  align-items: center;
+  min-height: 100%;
 }
 .main {
   background: url('img/border.png') #ccc;
   padding: 8px;
   width: 768px;
-  margin: auto;
+  margin: 20px 0;
   box-shadow: 20px 20px 40px #000, -20px -20px 40px #000;
   border-radius: 16px;
 }
 .main .inner {
   background: #e0e0e0;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
   border: 1px solid #ccc;
   border-radius: 10px;
   height: 800px;
